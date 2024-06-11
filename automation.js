@@ -1,7 +1,7 @@
-var oldNAME = "a"
-var newNAME = "b"
 var NAME = document.getElementById("nome")
+var newNAME = ""
 var LV = document.getElementById("nivel")
+NAME.addEventListener("change", rembNAME)
 LV.addEventListener("change", calcNAME)
 var STR = document.getElementById("forca")
 var ATK = document.getElementById("poder")
@@ -11,34 +11,32 @@ var ARM = document.getElementById("armadura")
 var AC = document.getElementById("defesa")
 addEventListener("change", calcAC)
 
+function rembNAME(){
+
+    newNAME = NAME.value
+}
 
 function calcNAME(){
-
-    var LVnum = parseInt(LV.value)
-
     
+    let LVnum = parseInt(LV.value)
+
     if(LVnum < 0){
         
-        newNAME =" [???]"
+        NAME.value =  newNAME + " [???]"  
     }
 
     if(LVnum == 0){
-        newNAME = " [MUNDANO]"
+        NAME.value = newNAME + " [MUNDANO]"
     }
 
     if(LVnum > 0 && LVnum <= 5){
-        newNAME =" [INICIANTE]"
+        NAME.value = newNAME + " [INICIANTE]"
     }
 
     if(LVnum > 5){
-        newNAME =" [VETERANO]"
+        NAME.value =  newNAME + " [VETERANO]"
     }
 
-    if(newNAME != oldNAME){
-    oldNAME = newNAME
-    }
-
-    NAME.value =+ newNAME
 }
 
 function calcATK() {
