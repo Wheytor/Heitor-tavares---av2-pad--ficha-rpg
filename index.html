@@ -28,6 +28,20 @@
         input[disabled] {
         background-color: lightgray;
         }
+
+        button[type="button"]{
+        border: 2px solid black;
+        height: 24pt;
+        border-radius: 16px;
+        padding-left: 8px;
+        padding-right: 8px;
+        width: 42pt;
+        text-align: center;
+        background-color: lightblue;
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -55,7 +69,31 @@
     <input type=number id="armadura" />
     <label>Defesa:</label>
     <input type=number id="defesa" disabled />
-        </p>
+    </p>
+
+    <p>
+    <button type="button" id="d4"> d4 </button>
+    <button type="button" id="d6"> d6 </button>  
+    <button type="button" id="d8"> d8 </button>
+    <button type="button" id="d10"> d10 </button>  
+    <button type="button" id="d12"> d12 </button>  
+    <button type="button" id="d20"> d20</button>  
+    <button type="button" id="d100"> d100</button>  
+    <button type="button" id="d1000"> d1000</button>   
+    </p>
+
+    <p>
+    <input type=number id="RSd4" class= "dice"  disabled />
+    <input type=number id="RSd6" class= "dice" disabled />
+    <input type=number id="RSd8" class= "dice" disabled />
+    <input type=number id="RSd10" class= "dice" disabled />
+    <input type=number id="RSd12" class= "dice" disabled />
+    <input type=number id="RSd20" class= "dice" disabled />
+    <input type=number id="RSd100" class= "dice" disabled />
+    <input type=number id="RSd1000" class= "dice" disabled />
+    </p>
+
     <script src= "automation.js"></script>
+
 </body>
 </html>
